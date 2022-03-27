@@ -1,0 +1,78 @@
+/* font-family: 'Black Han Sans', sans-serif;
+font-family: 'Noto Sans KR', sans-serif;
+font-family: 'Noto Serif KR', serif; */
+
+:root{
+        --hi-font-han : 'Black Han Sans', sans-serif;
+        --hi-font : 'Noto Sans KR', sans-serif;
+        --hi-font-em : 'Noto Serif KR', serif;
+        --hi-active : black;
+}
+body{
+    font-family: var(--hi-font);
+    font-weight: 100;
+    font-size: 16px;
+    line-height: 2;
+}
+li{list-style:0;}
+a{color:var(--hi-active); text-decoration: none;}
+/* 공통 클래스 */
+/* 접근성 */
+.hidden{
+    position: absolute; width: 0; height: 0; overflow: hidden; visibility: hidden;}
+button#top.top{
+    position: fixed;
+    background-color: black;
+    color: white;
+    right: 10px;
+    bottom: 10px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 0;
+    cursor: pointer;
+}
+/* bytton#top.top{
+    position: fixed;
+    background-color: black;
+    color: white;
+    right: 0;
+    bottom: 0;
+    padding: 0,5em;
+    border: 0;
+    cursor: pointer;
+} */
+ul#quick{
+    position: fixed;   
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    width: 25px;
+}
+ul#quick>li{ width: 100px; border: 1px solid var(--hi-active);
+    margin-top: 1px ;
+    margin-bottom: 1px;
+    margin-left: 0;
+    transition: 0.5s;
+}
+ul#quick a {color: black}
+ul#quick li.youtube{background-color: red;}
+ul#quick li.twitter{background-color: #29a4d9;}
+ul#quick li.facebook{background-color: #385498;}
+ul#quick li.instagram{background: rgb(27,55,196);
+    background: linear-gradient(38deg, rgba(27,55,196,1) 0%, rgba(252,70,107,1) 100%);
+}
+
+ul#quick>li>a{}
+ul#quick>li>a>i{display : inline-block; width: 25px;}
+ul#quick>li:hover{margin-left: -75px;}
+ul#quick>li>a>i+span{}
+
+/* ul#quick>li{ width: 100px; border: 1px solid var(--hi-active);
+    margin-top: 1px ;
+    margin-bottom: 1px;
+    margin-left: 0;
+    transition: 0.5s;
+} */
+ul#quick li i{display: inline-block; width: 25px; text-align: center;}
+ul#quick li a:hover{margin-left: -75px;}
